@@ -11,7 +11,9 @@ namespace ConsoleApp1
 
         static void Main(string[] args)
         {
-            Console.WriteLine(Welcome.Greet("swedish"));
+
+            Console.WriteLine(Vowel_Count.GetVowelCount("ryjhdiasgs"));
+
         }
     }
 }
