@@ -11,9 +11,8 @@ namespace ConsoleApp1
 
         static void Main(string[] args)
         {
-
-            Console.WriteLine(Vowel_Count.GetVowelCount("ryjhdiasgs"));
-
+            int[] array = new int[] { 5, 3, 7, 9,3 };
+            Console.WriteLine(Form_The_Minimum.MinValue(array));
         }
     }
 }
