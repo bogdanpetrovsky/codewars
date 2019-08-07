@@ -11,8 +11,12 @@ namespace ConsoleApp1
 
         static void Main(string[] args)
         {
-            int[] array = new int[] { 5, 3, 7, 9,3 };
-            Console.WriteLine(Form_The_Minimum.MinValue(array));
+            List<string> list = new List<string>();
+            list.Add("abba");
+            list.Add("baba");
+            list.Add("aabb");
+
+            Console.WriteLine(Next_smaller_number_with_the_same_digits.NextSmaller(907));
         }
     }
 }
