@@ -11,12 +11,11 @@ namespace ConsoleApp1
 
         static void Main(string[] args)
         {
-            List<string> list = new List<string>();
-            list.Add("abba");
-            list.Add("baba");
-            list.Add("aabb");
 
-            Console.WriteLine(Next_smaller_number_with_the_same_digits.NextSmaller(907));
+            Console.WriteLine(Alphabetic_Anagrams.ListPosition("MISSISSIPPI"));
+            //Console.WriteLine();
+            //Console.WriteLine(Alphabetic_Anagrams.ListPosition("BOOKKEEPER"));
+
         }
     }
 }
