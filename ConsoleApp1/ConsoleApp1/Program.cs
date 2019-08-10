@@ -11,10 +11,8 @@ namespace ConsoleApp1
 
         static void Main(string[] args)
         {
-
-            Console.WriteLine(Alphabetic_Anagrams.ListPosition("MISSISSIPPI"));
-            //Console.WriteLine();
-            //Console.WriteLine(Alphabetic_Anagrams.ListPosition("BOOKKEEPER"));
+            Solving_Linear_Equations_N_x_N__Gauss__Part_1_ ls = new Solving_Linear_Equations_N_x_N__Gauss__Part_1_();
+            Console.WriteLine(ls.Solve("1 2 0 7\r\n0 0 3 8\r\n0 5 6 9"));
 
         }
     }

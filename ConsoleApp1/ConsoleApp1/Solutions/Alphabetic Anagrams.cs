@@ -6,9 +6,11 @@ using System.Text;
 namespace ConsoleApp1
 {
     class Alphabetic_Anagrams
-    {
+    { 
         public static BigInteger Factorial(int n)
         {
+            if (n < 0)
+                return 1;
             BigInteger sum = 1;
             for(int i =1;i<=n;i++)
             {
@@ -46,51 +48,36 @@ namespace ConsoleApp1
                     i++;
             }
             int count = native.Count;
-            //foreach (var item in dict)
-            //{
-            //    Console.WriteLine(item.Key + " " + item.Value);
-            //}
+
             for (int i =0;i<actual.Count;i++)
             {
                 BigInteger temp = 0;
                 int j = 0;
-                while (j < native.Count - 1 && actual[i] != native[j])
+
+                while (actual[i] != native[j])
                 {
+
+                    if(dict[native[j]]  > 1)
+                        j += dict[native[j]] - 1;
                     temp = Factorial(count - 1);
                     dict[native[j]]--;
                     foreach (var item in dict)
                     {
                         temp /= Factorial(item.Value);
                     }
-                    if(dict[native[j]] < 1)
-                    {
-                        native.RemoveAt(j);
-
-                    }
-                    count--;
-                    while(j<native.Count -1  && native[j] == native[j+1])
-                        j++;
+                    dict[native[j]]++;
                     result += temp;
-                    Console.WriteLine(temp);
+
+                    j++;
                 }
+                
                 count--;
                 dict[native[j]]--;
-                if (dict[native[j]] < 1)
-                {
-                    native.RemoveAt(j);
+                native.RemoveAt(j);
 
-                }
 
-                // Console.WriteLine(temp);
             }
-
-            //for(int i =0;i<native.Count;i++)
-            //{
-            //    Console.WriteLine(native[i]);
-            //}
-            //Console.WriteLine();
-
-            Console.WriteLine();
+            result++;
             return Convert.ToInt64(result.ToString());
         }
     }
