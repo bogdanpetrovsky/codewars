@@ -6,8 +6,10 @@ namespace ConsoleApp1
 {
     class Merged_String_Checker
     {
+
         public static bool isMerge(string s, string part1, string part2)
         {
+            Console.WriteLine(s + "  " + part1 + "   " + part2);
             if (s.Length != part2.Length + part1.Length)
                 return false;
 
@@ -16,8 +18,7 @@ namespace ConsoleApp1
             {
                 if ((!String.IsNullOrEmpty(part2) && !String.IsNullOrEmpty(part1)) && (s[i] != part1[j1] && s[i] != part2[j2]))
                 {
-                    if (s.Contains("nananas"))
-                        return true;
+
                     return false;
                 }
 

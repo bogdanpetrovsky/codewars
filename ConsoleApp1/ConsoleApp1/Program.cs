@@ -12,8 +12,7 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
 
-            Console.WriteLine(Twice_Linear.DblLinear(20));
-
+            Console.WriteLine(Range_Extraction.Extract(new[] { -6, -3, -2, -1, 0, 1, 3, 4, 5, 7, 8, 9, 10, 11, 14, 15, 17, 18, 19, 20 }));
         }
     }
 }

@@ -10,7 +10,6 @@ namespace ConsoleApp1
     {
         public static BigInteger TotalIncDec(int n)
         {
-            BigInteger result = Choose(n + 10, 10) + Choose(n + 9, 9) - 10 * n - 1;
             return Choose(n + 10, 10) + Choose(n + 9, 9) - 10 * n - 1;
         }
 
